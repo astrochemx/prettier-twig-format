@@ -1,0 +1,24 @@
+{
+  "name": "prettier-twig-tailwind-format",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Examples of formatting Twig templates with Tailwind CSS classes using Prettier and custom plugins",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --check --ignore-unknown .",
+    "format:fix": "prettier --write --ignore-unknown --list-different ."
+  },
+  "devDependencies": {
+    "@ttskch/prettier-plugin-tailwindcss-anywhere": "^0.1.0",
+    "@zackad/prettier-plugin-twig": "^0.16.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "prettier": "^3.5.3"
+  },
+  "packageManager": "pnpm@10.10.0",
+  "pnpm": {
+    "patchedDependencies": {
+      "@ttskch/prettier-plugin-tailwindcss-anywhere@0.1.0": "patches/@ttskch__prettier-plugin-tailwindcss-anywhere@0.1.0.patch"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>My Webpage</title>
+</head>
+
+<body>
+  <ul id="navigation">
+    {% for item in navigation %}
+    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+    {% endfor %}
+  </ul>
+
+  {% block content %}
+  {% block content %}
+  <div class="space-y-4 flex-col flex">
+    <div class="p-4 rounded-lg bg-blue-500 text-white rounded-lg p-4">
+      Hello, {{ name }}!
+    </div>
+  </div>
+  {% endblock %}
+  {% endblock %}
+
+  {% block content %}
+  {% block content %}
+  <div class="flex flex-col space-y-4">
+    <div class="rounded-lg bg-blue-500 p-4 text-white">
+      Hello, {{ name }}!
+    </div>
+  </div>
+  {% endblock %}
+  {% endblock %}
+
+  {% block foo %}<div class="items-center ms-auto flex gap-[1.5rem] flex ms-auto is-buz">{{ bar}}</div>{% endblock %}
+
+  {% block foo %}<div class="ms-auto flex items-center gap-[1.5rem] is-buz">{{ bar }}</div>{% endblock %}
+
+  <div class="p-0 container m-0"></div><div class="p-0 container m-0"></div><div class="p-0 container m-0"></div>
+
+  <div class="container m-0 p-0"></div><div class="container m-0 p-0"></div><div class="container m-0 p-0"></div>
+
+  <h1>My Webpage</h1>
+  {{ a_variable }}
+  {% set name = "Fabien" %}
+  {% set numbers = [1, 2] %}
+  {% set map = {
+  city: "Paris"
+  } %}
+  {{ data|convert_encoding(from: "iso-2022-jp", to: "UTF-8") }}
+</body>
+
+</html>
