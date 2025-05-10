@@ -2,6 +2,16 @@
 
 💅 This repository demonstrates how to format `*.html.twig` (`*.twig`) files that include [Tailwind CSS](https://tailwindcss.com/) classes using [Prettier](https://prettier.io/) and relevant plugins.
 
+> [!WARNING]
+>
+> **This branch** _does not include_ the [pnpm patch](https://pnpm.io/cli/patch) for [`@ttskch/prettier-plugin-tailwindcss-anywhere@0.1.0`](https://www.npmjs.com/package/@ttskch/prettier-plugin-tailwindcss-anywhere/v/0.1.0) that ensures compatibility with the [Prettier VS Code](https://github.com/prettier/prettier-vscode) extension.
+>
+> You should see an error in the Prettier output panel when formatting [`anywhere.raw.html.twig`](./templates/anywhere.raw.html.twig).
+>
+> Using the [`@ttskch/prettier-plugin-tailwindcss-anywhere@0.1.0`](https://www.npmjs.com/package/@ttskch/prettier-plugin-tailwindcss-anywhere/v/0.1.0) plugin in the _general_ Prettier configuration (and not only within the _`overrides`_ section) results in an error when formatting _any file_ with the [Prettier VS Code](https://github.com/prettier/prettier-vscode) extension.
+>
+> For more context, please see the related [Pull Request](https://github.com/ttskch/prettier-plugin-tailwindcss-anywhere/pull/9).
+
 ## ✨ Purpose
 
 - Show how to use Prettier with:
@@ -26,9 +36,6 @@ The [`templates`](./templates/) folder contains 5 example files:
 ## ⚙️ Setup
 
 This project uses the [`pnpm`](https://pnpm.io/) package manager.
-
-A [pnpm patch](https://pnpm.io/cli/patch) is applied to `@ttskch/prettier-plugin-tailwindcss-anywhere@0.1.0` to ensure compatibility with the [Prettier VS Code Extension](https://github.com/prettier/prettier-vscode).
-For details, see the related [Pull Request](https://github.com/ttskch/prettier-plugin-tailwindcss-anywhere/pull/9).
 
 ### 🧰 Install Dependencies
 

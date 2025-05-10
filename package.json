@@ -15,10 +15,5 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "prettier": "^3.5.3"
   },
-  "packageManager": "pnpm@10.10.0",
-  "pnpm": {
-    "patchedDependencies": {
-      "@ttskch/prettier-plugin-tailwindcss-anywhere@0.1.0": "patches/@ttskch__prettier-plugin-tailwindcss-anywhere@0.1.0.patch"
-    }
-  }
+  "packageManager": "pnpm@10.10.0"
 }
