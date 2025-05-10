@@ -7,11 +7,12 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  // Adjust if using a Twig-specific VS Code extension
   "files.associations": {
     "*.html.twig": "html",
     "*.twig": "html"
   },
-  // Optional:
+  // Optional, see https://github.com/prettier/prettier-vscode?tab=readme-ov-file#prettierdocumentselectors
   // "prettier.documentSelectors": ["*.html.twig", "*.twig"],
   "prettier.enable": true
 }

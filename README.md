@@ -30,7 +30,7 @@ This project uses the [`pnpm`](https://pnpm.io/) package manager.
 A [pnpm patch](https://pnpm.io/cli/patch) is applied to `@ttskch/prettier-plugin-tailwindcss-anywhere@0.1.0` to ensure compatibility with the [Prettier VS Code Extension](https://github.com/prettier/prettier-vscode).
 For details, see the related [Pull Request](https://github.com/ttskch/prettier-plugin-tailwindcss-anywhere/pull/9).
 
-### 🧰 Install dependencies
+### 🧰 Install Dependencies
 
 ```bash
 pnpm install
@@ -39,7 +39,7 @@ pnpm install
 > [!NOTE]
 > If you haven’t used `pnpm` before, check out the [pnpm installation guide](https://pnpm.io/installation).
 
-### 🪛 Format files
+### 🪛 Format Files
 
 - Check formatting:
 
@@ -65,7 +65,16 @@ The configuration applies specific plugins based on filenames:
 
 ## 🧩 VS Code Integration
 
-This project includes workspace-specific settings in [`.vscode/settings.json`](./.vscode/settings.json) that override your global VS Code settings:
+### 🛍️ VS Code Recommended Extensions
+
+This project includes VS Code extension recommendations in [`.vscode/extensions.json`](./.vscode/extensions.json):
+
+- [`bradlc.vscode-tailwindcss`](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) – _Optional:_ Provides intelligent Tailwind CSS support in VS Code (class name autocomplete, linting, etc.)
+- [`esbenp.prettier-vscode`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) – _Required:_ Integrates Prettier into VS Code for consistent formatting
+
+### 🧾 VS Code Workspace Settings
+
+The project contains workspace-specific settings in [`.vscode/settings.json`](./.vscode/settings.json) that override your global VS Code preferences:
 
 ```json
 {
@@ -77,11 +86,12 @@ This project includes workspace-specific settings in [`.vscode/settings.json`](.
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  // Adjust if using a Twig-specific VS Code extension
   "files.associations": {
     "*.html.twig": "html",
     "*.twig": "html"
   },
-  // Optional:
+  // Optional, see https://github.com/prettier/prettier-vscode?tab=readme-ov-file#prettierdocumentselectors
   // "prettier.documentSelectors": ["*.html.twig", "*.twig"],
   "prettier.enable": true
 }
