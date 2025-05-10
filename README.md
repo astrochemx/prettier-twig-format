@@ -27,17 +27,24 @@ The [`templates`](./templates/) folder contains 5 example files:
 
 This project uses the [`pnpm`](https://pnpm.io/) package manager.
 
-A [pnpm patch](https://pnpm.io/cli/patch) is applied to `@ttskch/prettier-plugin-tailwindcss-anywhere@0.1.0` to ensure compatibility with the [Prettier VS Code Extension](https://github.com/prettier/prettier-vscode).
-For details, see the related [Pull Request](https://github.com/ttskch/prettier-plugin-tailwindcss-anywhere/pull/9).
+> [!NOTE]
+> If you haven’t used `pnpm` before, check out the [pnpm installation guide](https://pnpm.io/installation).
+
+### 🩹 Patch Note
+
+> [!IMPORTANT]
+>
+> A [pnpm patch](https://pnpm.io/cli/patch) ([`@ttskch__prettier-plugin-tailwindcss-anywhere@0.1.0.patch`](./patches/@ttskch__prettier-plugin-tailwindcss-anywhere@0.1.0.patch)) in the [`patches`](./patches/) folder is applied to [`@ttskch/prettier-plugin-tailwindcss-anywhere@0.1.0`](https://www.npmjs.com/package/@ttskch/prettier-plugin-tailwindcss-anywhere/v/0.1.0) to ensure compatibility with the [Prettier VS Code](https://github.com/prettier/prettier-vscode) extension.
+>
+> For details, see the related [Pull Request](https://github.com/ttskch/prettier-plugin-tailwindcss-anywhere/pull/9).
+>
+> Check out the [`prettier-error`](https://github.com/astrochemx/prettier-twig-tailwind-format/tree/prettier-error) branch to reproduce the error without the patch and see how the [Prettier VS Code](https://github.com/prettier/prettier-vscode) extension fails to load the plugin, preventing it from formatting files.
 
 ### 🧰 Install Dependencies
 
 ```bash
 pnpm install
 ```
-
-> [!NOTE]
-> If you haven’t used `pnpm` before, check out the [pnpm installation guide](https://pnpm.io/installation).
 
 ### 🪛 Format Files
 
